@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dave Keyz Premiere</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@400;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo" id="logo" role="button" tabindex="0" aria-label="About Dave Keyz Premiere"><div class="mono">DK</div><div class="lt"><b>Dave Keyz</b><em>PREMIERE</em></div></div>
+  <nav id="nav">
+    <button class="on" data-v="home">Home</button>
+    <button data-v="movies">Movies</button>
+    <button data-v="trailers">Trailers</button>
+    <button data-v="list">My List</button>
+    <button data-v="contact">Contact</button>
+  </nav>
+  <input type="search" placeholder="Search any movie" aria-label="Search movies">
+</header>
+
+<div class="hero" id="hero">
+  <div>
+    <span class="badge">Now Playing</span>
+    <h1 id="hT"></h1>
+    <p id="hD"></p>
+    <button class="btn gold" id="hFull">&#9654; Play</button><button class="btn ghost" id="hPlay">More Info</button>
+    <button class="btn ghost" id="hAdd">Add to List</button>
+  </div>
+  <div class="dots" id="dots"></div>
+  <button class="hx" id="hX" aria-label="Close trailer">&#10005;</button><button class="hs" id="hS" aria-label="Toggle sound">&#128263;</button>
+</div>
+
+<main>
+  <div class="view on" id="home"></div>
+  <div class="view" id="movies"><div class="ph"><h2>Movies</h2><p>Browse by genre. Tap any poster to watch the trailer.</p></div><div class="chips" id="mvChips"></div><div class="grid" id="mvGrid"></div><div class="more"><button class="btn ghost" id="mvMore">Load more</button></div></div>
+  <div class="view" id="trailers"><div class="ph"><h2>Trailers</h2><p>Tap a trailer to watch it right here.</p></div><div class="grid tiles" id="trGrid"></div></div>
+  <div class="view" id="list"><div class="ph"><h2>My List</h2><p id="listCount"></p></div><div class="grid" id="listGrid"></div><div class="empty" id="listEmpty"><p>Nothing saved yet</p><button class="btn gold" id="goMovies">Browse movies</button></div></div>
+<div class="view" id="about">
+    <div class="ph abt"><div class="mono big">DK</div><h2>About Dave Keyz Premiere</h2><p>Your front-row seat to the movies.</p></div>
+    <div class="prose">
+      <h3>Our story</h3>
+      <p>Dave Keyz Premiere started with a simple love of movies. Founded by Dave Keyz in Akure, Nigeria,
+         it was built to be a place where movie lovers can find their next favorite film without scrolling 
+         through endless menus.Here you can watch the latest trailers, browse thousands of movies, save the ones 
+         you want to see, and share what you think in the comments. Everything is in one place, with a look inspired by 
+         the red carpet.We believe every movie night should begin with a great premiere. Whether you want action, comedy, 
+         romance, or a good scare, Dave Keyz Premiere is your front-row seat.</p>
+      <h3>What we offer</h3>
+      <ul><li>Trailers for the newest and best movies, playing right on the page</li><li>Posters, ratings and details for thousands of films</li><li>Your own list of movies to watch later</li><li>Comments, so you can share what you thought</li></ul>
+      <h3>Our mission</h3>
+      <p>Our mission is to help everyone find their next favorite movie. 
+        We bring the latest trailers, trending films, and timeless classics 
+        together in one easy place, so you spend less time searching and more time 
+        watching. We want Dave Keyz Premiere to be a home for movie lovers, where you 
+        can discover, save, and talk about the films you love.</p>
+      <button class="btn gold" id="aboutContact">Contact us</button>
+    </div>
+  </div>
+  <div class="view" id="contact">
+    <div class="ph"><h2>Contact Us</h2><p>Questions, movie requests or business offers? Send us a message.</p></div>
+    <div class="prose cwrap">
+      <form id="cForm">
+        <input name="name" placeholder="Your name" required aria-label="Your name">
+        <input name="email" type="email" placeholder="Your email" required aria-label="Your email">
+        <input name="subject" placeholder="Subject" aria-label="Subject">
+        <textarea name="message" placeholder="Got a movie you want us to feature? Tell us." required aria-label="Message"></textarea>
+        <button class="btn gold" type="submit">Send message</button>
+        <div id="cStat" role="status"></div>
+      </form>
+      <div class="cinfo">
+        <h3>Reach us</h3>
+        <p>Email: <a id="cMail" href="#"></a></p>
+        <p>Location: Akure, Ondo State, Nigeria</p>
+        <h3>Follow us</h3>
+        <p><a href="#">Instagram</a> &middot; <a href="#">X</a> &middot; <a href="https://www.tiktok.com/@dave_keyz343">TikTok</a> &middot; <a href="https://www.youtube.com/@DavidIrinyemi">YouTube</a> &middot; <a href="https://wa.me/2347037758209">WhatsApp</a></p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>© 2026 Dave Keyz Premiere.</footer>
+
+<div class="modal" id="modal">
+  <div class="box">
+    <div class="player"><div class="play">▶</div><div>The official YouTube trailer plays here, right inside your page.</div></div>
+    <div class="info"><h3 id="mT"></h3><p id="mD"></p>
+      <button class="btn gold" id="mAdd">Add to List</button><button class="btn ghost" id="mClose">Close</button>
+      <div class="cm"><h4 id="cmH">Comments</h4>
+        <div class="cmf"><input id="cmName" placeholder="Your name" maxlength="30" aria-label="Your name"><input id="cmText" placeholder="Share what you thought of this movie" maxlength="300" aria-label="Your comment"><button class="btn gold" id="cmPost">Post</button></div>
+        <div id="cmList"></div></div></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
