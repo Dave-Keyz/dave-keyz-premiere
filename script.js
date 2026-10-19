@@ -126,7 +126,7 @@ mvMore.onclick=()=>mvLoad(false);mvLoad(true);
 
 // Trailers page
 async function loadTr(){let items=[];
- if(TMDB_KEY){try{items=(await many('/trending/movie/week',24)).filter(m=>m.backdrop_path).slice(0,12)}catch(e){}}
+ if(TMDB_KEY){try{items=(await many('/trending/movie/week',60)).filter(m=>m.backdrop_path).slice(0,48)}catch(e){}}
  else items=[...rows['Trending'],...rows['New Releases']].map(title=>({title}));
  items.forEach(m=>{const t=document.createElement('div');t.className='tile';t.tabIndex=0;
   if(m.backdrop_path)t.style.background=`#222 url(${IMG}w780${m.backdrop_path}) center/cover`;
